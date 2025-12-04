@@ -4,8 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Inicio from './pages/Inicio';
 import Servicos from './pages/Servicos';
-import Planos from './pages/Planos';
-import Depoimentos from './pages/Depoimentos';
+import Portfolio from './pages/Portfolio';
+import Sobre from './pages/Sobre';
 import Contato from './pages/Contato';
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/servicos" element={<Servicos />} />
-            <Route path="/planos" element={<Planos />} />
-            <Route path="/depoimentos" element={<Depoimentos />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/sobre" element={<Sobre />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>
