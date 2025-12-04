@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Building2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -16,16 +16,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Fecha o menu quando muda de página
   useEffect(() => {
     setMenuAberto(false);
   }, [location]);
 
   const menuItems = [
-    { nome: '', path: '' },
+    { nome: 'Início', path: '/' },
     { nome: 'Serviços', path: '/servicos' },
-    { nome: 'Planos', path: '/planos' },
-    { nome: 'Depoimentos', path: '/depoimentos' },
+    { nome: 'Portfólio', path: '/portfolio' },
+    { nome: 'Sobre', path: '/sobre' },
     { nome: 'Contato', path: '/contato' }
   ];
 
@@ -38,12 +37,25 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-            <img src="https://i.postimg.cc/wjdHbFLm/Evolua-(3).jpg" alt="" />
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition">
+          <img 
+            src="/logo.png" 
+            alt="Felipe Freitas Logo" 
+            className="h-12 w-auto object-contain"
+            onError={(e) => {
+              // Se a imagem não carregar, mostra um fallback
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          {/* Fallback se a logo não carregar */}
+          <div className="hidden w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <img src="https://i.postimg.cc/Vsbx9RcS/FFR-(3).jpg" alt="logo" />
           </div>
-          <span className="text-2xl font-bold text-gray-900">EmpresaPro</span>
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-gray-900">Felipe Freitas</span>
+            <span className="text-xs text-gray-600">Desenvolvedor Full Stack</span>
+          </div>
         </Link>
 
         {/* Menu Desktop */}
@@ -65,7 +77,7 @@ export default function Navbar() {
             to="/contato"
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition"
           >
-            Começar Agora
+            Solicitar Orçamento
           </Link>
         </div>
 
@@ -99,7 +111,7 @@ export default function Navbar() {
               to="/contato"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-center"
             >
-              Começar Agora
+              Solicitar Orçamento
             </Link>
           </div>
         </div>
