@@ -44,7 +44,7 @@ export default function Portfolio() {
       imagem: '🤖',
       tecnologias: ['Node.js', 'Python'],
       resultado: '90% de redução no tempo de resposta',
-      link: '#',
+      link: 'https://github.com/FelipeFreitasRossi/Chatbot',
       github: 'https://github.com/FelipeFreitasRossi/Chatbot',
       valor: 'R$ 2.000'
     },
@@ -55,7 +55,7 @@ export default function Portfolio() {
       imagem: '📊',
       tecnologias: ['HTML', 'CSS', 'JavaScript', "Java", "SQL"],
       resultado: '90% mais eficiência',
-      link: '#',
+      link: 'https://Control-tech-six.vercel.app',
       github: 'https://github.com/SENAISP-Unid601-Projetos/ControlTech',
       valor: 'R$ 9.500'
     },
@@ -66,7 +66,7 @@ export default function Portfolio() {
       imagem: '🏢',
       tecnologias: ['HTML', 'JavaScript', 'CSS'],
       resultado: '+450 leads buscados',
-      link: '#',
+      link: 'https://workshop2025-senai.netlify.app',
       github: 'https://github.com/FelipeFreitasRossi/ProjetoSenai',
       valor: 'R$ 3.500'
     },

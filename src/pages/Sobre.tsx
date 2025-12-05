@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code2, Award, Users, TrendingUp, Coffee, Zap, Heart, Target, ArrowRight } from 'lucide-react';
+import { Code2, Award, Users, TrendingUp, Zap, Heart, Target, ArrowRight } from 'lucide-react';
 
 export default function Sobre() {
 

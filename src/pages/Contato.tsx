@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Linkedin, Instagram, Github, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, CheckCircle, Linkedin, Instagram, Github, MessageCircle } from 'lucide-react';
 
 export default function Contato() {
   const [formData, setFormData] = useState({
@@ -71,9 +71,6 @@ export default function Contato() {
       setEnviando(false);
     }
   };
-
-  // Monta mensagem para WhatsApp
-  const mensagemWhatsApp = `Olá Felipe! Vim pelo seu portfólio e gostaria de solicitar um orçamento.%0A%0A*Nome:* ${formData.nome}%0A*Email:* ${formData.email}%0A*Serviço:* ${formData.servico}%0A*Orçamento:* ${formData.orcamento}%0A*Prazo:* ${formData.prazo}%0A%0A*Mensagem:*%0A${formData.mensagem}`;
 
   return (
     <div className="bg-white pt-20">
